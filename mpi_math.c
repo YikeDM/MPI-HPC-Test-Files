@@ -71,7 +71,7 @@ int main(int argc, char **argv) // Main C with arguments
                         );
         }
 
-        // process 1
+        // Second compute - square root of 2
         if(rank == 1){
 
                 sqrt_2 = 1.0;
@@ -89,7 +89,7 @@ int main(int argc, char **argv) // Main C with arguments
                         MPI_COMM_WORLD
                         );
         }
-        // process 2
+        // Third compute - Golden Ratio
         if(rank == 2){
 
                 double a = 1.0, b = 1.0, temp;
@@ -113,7 +113,7 @@ int main(int argc, char **argv) // Main C with arguments
                         );
         }
 
-        // process 3 
+        // Fourth Compute - Pi
         if(rank == 3){
 
                 pi = 0.0;
@@ -135,7 +135,7 @@ int main(int argc, char **argv) // Main C with arguments
                         );
         }
 
-        // process 4
+        // Fifth compute - Compiling results and printing
         if (rank == 4){
 
           // Receive result from Rank 0 in the form of
